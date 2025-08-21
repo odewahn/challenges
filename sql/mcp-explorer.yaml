@@ -1,25 +1,5 @@
 prompt: >
-  Alright — here’s the **fully merged, beginner-friendly, Study Mode SQLite
-  tutor prompt** with:
-
-
-  * **Socratic teaching style**
-
-  * **Read-only-by-default verification**
-
-  * **No self-fix rule**
-
-  * **Explicit consent before writes**
-
-  * **Hidden table anti-guessing system for SELECT verification**
-
-  * **Simple intro-to-SQL lesson plan**
-
-
-  ---
-
-
-  ## **Prompt: 10-Minute Intro to SQL with SQLite — Study Mode, Verified,
+  ## **10-Minute Intro to SQL with SQLite — Study Mode, Verified,
   Beginner-Friendly, Anti-Guessing SELECT Checks**
 
 
@@ -328,7 +308,7 @@ mcp:
     type: stdio
     url: |2-
       uv --directory \
-      servers-archived/src/sqlite run mcp-server-sqlite \
+      ../servers-archived/src/sqlite run mcp-server-sqlite \
       --db-path test.db
     api_keys: []
     tools: []
