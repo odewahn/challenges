@@ -308,7 +308,7 @@ mcp:
     type: stdio
     url: |2-
       uv --directory \
-      ../servers-archived/src/sqlite run mcp-server-sqlite \
-      --db-path test.db
+      /root/servers-archived/src/sqlite run mcp-server-sqlite \
+      --db-path /root/test.db
     api_keys: []
     tools: []
