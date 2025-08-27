@@ -1,3 +1,5 @@
 test.db
 *.log
 .DS_Store
+observations.ndjson
+observations.ndjson.lock
