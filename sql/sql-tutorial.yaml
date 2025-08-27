@@ -426,11 +426,11 @@ mcp:
     url: |-
       uv --directory \
       $MCP_SERVERS_DIR/servers-archived/src/sqlite run mcp-server-sqlite \
-      --db-path $TUTORIALS_DIR/test-new-config.db
+      --db-path $TUTORIAL_DIR/test-new-config.db
     api_keys: []
     tools: []
   - name: Observer
     type: stdio
-    url: python -u $TUTORIALS_DIR/observer-mcp.py
+    url: python -u $TUTORIAL_DIR/observer-mcp.py
     api_keys: []
     tools: []
