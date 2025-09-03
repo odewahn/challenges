@@ -10,6 +10,10 @@ Observations MCP server (FastMCP version, no `schema=` arguments)
 Env vars:
   OBS_CONTEXT_PATH  -> path to private_context.json (default: ./private_context.json)
   OBS_LOG_PATH      -> path to observations.ndjson (default: ./observations.ndjson)
+
+CLI args:
+  --log-dir   directory to place the log file (default: current directory)
+  --log-file  log filename (default: observations.ndjson)
 """
 import os
 import json
@@ -17,6 +21,7 @@ import uuid
 import secrets
 import datetime
 import pathlib
+import argparse
 from typing import Any, Dict, Iterable, List, Optional, Literal
 
 from filelock import FileLock
@@ -257,4 +262,23 @@ def list_events(
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description=__doc__,
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+    )
+    parser.add_argument(
+        "--log-dir",
+        default=".",
+        help="directory to place the log file (default: current directory)",
+    )
+    parser.add_argument(
+        "--log-file",
+        default="observations.ndjson",
+        help="log filename (default: observations.ndjson)",
+    )
+    args = parser.parse_args()
+
+    LOG_PATH = pathlib.Path(args.log_dir) / args.log_file
+    LOCK_PATH = pathlib.Path(str(LOG_PATH) + ".lock")
+
     mcp.run()

@@ -425,12 +425,14 @@ mcp:
     type: stdio
     url: |-
       uv --directory \
-      $MCP_SERVERS_DIR/servers-archived/src/sqlite run mcp-server-sqlite \
-      --db-path $TUTORIAL_DIR/test-new-config.db
+      $MCP_HOME/servers-archived/src/sqlite run mcp-server-sqlite \
+      --db-path $USER_HOME/tutorial.db
     api_keys: []
     tools: []
   - name: Observer
     type: stdio
-    url: python -u $TUTORIAL_DIR/observer-mcp.py
+    url: |-
+      python -u $CHALLENGES_HOME/observer-mcp.py \
+      --log-dir=$USER_HOME
     api_keys: []
     tools: []
