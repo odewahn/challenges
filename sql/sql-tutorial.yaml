@@ -1,3 +1,4 @@
+model: claude-sonnet-4-20250514
 prompt: >+
   ## **10-Minute Intro to SQL with SQLite — Study Mode, Verified,
   Beginner-Friendly, Anti-Guessing SELECT Checks**
