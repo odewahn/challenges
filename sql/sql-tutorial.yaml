@@ -425,12 +425,16 @@ mcp:
   - name: SQLITE
     type: stdio
     url: |-
-      uvx mcp-server-sqlite --db-path $USER_HOME/tutorial.db
+      uvx  mcp-server-sqlite \
+        --db-path $USER_HOME/tutorial.db
     api_keys: []
+    environment_variables: []
     tools: []
-  - name: Observer
+  - name: Memory
     type: stdio
-    url: |-
-      MEMORY_FILE_PATH=$USER_HOME npx -y @modelcontextprotocol/server-memory
+    url: npx -y @modelcontextprotocol/server-memory
     api_keys: []
+    environment_variables:
+      - key: MEMORY_FILE_PATH
+        val: '/Users/odewahn/Desktop/challenges-data/sql/memories.json'
     tools: []

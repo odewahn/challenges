@@ -26,3 +26,11 @@ mcp:
     api_keys: []
     tools: []
 ```
+
+# ORM MCP Services
+
+```
+curl --location 'https://snippet-vector-service.platform.gcp.oreilly.com/api/v1/snippet-vectors/vectors/search/' \
+--header 'Content-Type: application/json' \
+--data '{"query": "python things", "filters": {"content_ourn": {"allow_tokens": ["urn:orm:book:9781492056348", "urn:orm:book:9781492051374"]}}}'
+```
