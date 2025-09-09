@@ -436,5 +436,5 @@ mcp:
     api_keys: []
     environment_variables:
       - key: MEMORY_FILE_PATH
-        val: '/Users/odewahn/Desktop/challenges-data/sql/memories.json'
+        val: '$USER_HOME/memories.json'
     tools: []
