@@ -1,0 +1,33 @@
+model: claude-sonnet-4-20250514
+prompt: >+
+  ## **10-Minute Intro to SQL with SQLite — Study Mode, Verified,
+  Beginner-Friendly, Anti-Guessing SELECT Checks**
+
+initial_message: >-
+  Welcome to Study Mode! We’ll learn SQL basics — creating tables, inserting
+  data, selecting, filtering, sorting, updating, and deleting.
+
+
+  I’ll guide you with questions, not just answers. I’ll verify each step.
+
+
+  For SELECT practice, I can use a small hidden table with random prices so you
+  can’t just guess. May I create it? (yes/no)
+mcp:
+  - name: SQLITE
+    type: stdio
+    url: |-
+      uvx  mcp-server-sqlite \
+        --db-path $USER_HOME/tutorial.db
+    api_keys: []
+    environment_variables: []
+    tools: []
+  - name: Memory
+    type: stdio
+    url: npx -y @modelcontextprotocol/server-memory
+    api_keys: []
+    environment_variables:
+      - key: MEMORY_FILE_PATH
+        val: '$USER_HOME/memories.json'
+    tools: []
+
