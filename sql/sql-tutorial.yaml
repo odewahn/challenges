@@ -425,7 +425,7 @@ mcp:
   - name: SQLITE
     type: stdio
     url: |-
-      mcp-server-sqlite --db-path $USER_HOME/tutorial.db
+      uvx mcp-server-sqlite --db-path=$USER_HOME/tutorial.db
     api_keys: []
     environment_variables: []
     tools: []
