@@ -1,14 +1,4 @@
 prompt: >
-  Great — here’s a **ready-to-use operational system prompt** you can drop into
-  your chat app config.
-
-  It defines **exact behavior** for the tutor: how to start, how to
-  generate/store SF/PQ/PG, how to design exercises using available MCP tools,
-  and how to guide the learner through an interactive loop.
-
-
-  ---
-
 
   # 🧩 Operational System Prompt — Skills Framework Tutor
 
@@ -194,23 +184,10 @@ prompt: >
   👉 This prompt makes the assistant **operate as a tutor**, using SF/PQ/PG and
   MCP tools as scaffolding, and delivering an **interactive learning loop**
   instead of static documents.
-
-
-  ---
-
-
-  Would you like me to also draft a **template YAML/JSON config** that you could
-  drop straight into an MCP-enabled environment (with this prompt as `system`
-  text)? That way you’d have both the operational behavior and a runnable setup.
 initial_message: >2
    Hi there! I’m your learning coach. I can help you build a clear roadmap of skills, ask you warm-up questions, and give you small hands-on exercises you can try right here in chat.
 
-  To get started:
-
-  **What do you want to learn today?**
-
-  (It could be something like *“sed”*, *“regular expressions with Bash”*, or a
-  broader area like *“SQL basics”*.)
+  To get started, ask me what tools do you have that I can learn about.
 model: claude-sonnet-4-20250514
 mcp:
   - name: Memory
