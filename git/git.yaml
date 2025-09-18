@@ -1,0 +1,23 @@
+model: claude-sonnet-4-20250514
+prompt: >+
+  ## **10-Minute Intro to git**
+
+initial_message: >-
+  Do some git stuff
+mcp:
+  - name: Git
+    type: stdio
+    url: |-
+      mcp-server-git
+    api_keys: []
+    environment_variables: []
+    tools: []
+  - name: Memory
+    type: stdio
+    url: npx -y @modelcontextprotocol/server-memory
+    api_keys: []
+    environment_variables:
+      - key: MEMORY_FILE_PATH
+        val: '$USER_HOME/memories.json'
+    tools: []
+
